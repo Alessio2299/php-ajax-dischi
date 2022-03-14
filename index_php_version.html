@@ -12,7 +12,7 @@
       <header>
         <img src="./img/logo-spotify.png" alt="Logo Spotify">
         <div>
-          <select name="genre" v-model="valueOptionGenre" id="genreMusic">
+          <select name="genre" v-model="value" id="genreMusic">
             <option value="All">All</option>
             <option v-for="(genre,index) in listAlbumGenre" :key="index" :value="genre">{{genre}}</option>
           </select>
@@ -20,7 +20,7 @@
       </header>
       <main>
         <div class="container">
-          <div class="card" v-for="(album, index) in albums" :key="(index)">
+          <div class="card" v-for="(album, index) in listAlbumFiltered" :key="(index)">
               <img :src="album.poster" :alt="album.title">
               <h3>{{album.title}}</h3>
               <h5>{{album.author}}</h5>

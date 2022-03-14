@@ -1,12 +1,20 @@
 const app = new Vue({
   el: '#app',
   data: {
-    valueOptionGenre: "All",
+    value: "All",
     albums: [],
     listAlbumGenre: []
   },
   computed:{
-
+  listAlbumFiltered(){
+    if(this.value == "All"){
+      return this.albums
+    }else{
+        return this.albums.filter(album =>{
+        return (album.genre.includes(this.value));
+      });
+    }
+  }
   },
   mounted(){
     this.getAlbum();
