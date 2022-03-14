@@ -1,14 +1,6 @@
 <?php
   require __DIR__  . "/./database.php";
   $listGerne = [];
-  // $database = [
-  //   [
-  //       'title' => 'New Jersey',
-  //       'author' => 'Bon Jovi',
-  //       'year' => 1988,
-  //       'poster' => 'https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg',
-  //       'genre' => 'Rock'
-  //   ],
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -41,7 +33,7 @@
         <?php
           foreach($database as $album){
             echo "<div class='card'>";
-            echo "<img src='" . $album["poster"] . "'". "alt='" . $album["title"] . "'".">";
+            echo "<img src='" . $album["poster"] . "'". "alt='" . $album["title"] . "'>";
             echo "<h3>" . $album["title"] . "</h3>";
             echo "<h5>" . $album["author"] . "</h5>";
             echo "<span>" . $album["year"] . "</span>";
